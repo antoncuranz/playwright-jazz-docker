@@ -31,7 +31,6 @@ jobs:
       - name: Build and push app
         uses: docker/build-push-action@v6
         with:
-          context: sync-server
           push: ${{ github.event_name == 'push' }}
           tags: |
             ghcr.io/antoncuranz/playwright-jazz-docker:latest
