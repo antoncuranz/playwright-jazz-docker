@@ -6,7 +6,7 @@ ARG JAZZ_VERSION="0.19.1"
 # renovate: datasource=npm depName=playwright
 ARG PLAYWRIGHT_VERSION="1.56.0"
 
-FROM node:22.21.1-bookworm
+FROM node:24.11.0-bookworm
 
 WORKDIR /app
 
