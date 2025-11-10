@@ -11,7 +11,7 @@ FROM node:22.21.1-bookworm
 WORKDIR /app
 
 RUN \
-    npx -y playwright@${PALYWRIGHT_VERSION} install --with-deps chromium && \
+    npx -y playwright@${PALYWRIGHT_VERSION} install --with-deps chromium chromium-headless-shell && \
     npm install -g jazz-run@${JAZZ_VERSION} && \
     npm cache clean --force
 
