@@ -1,5 +1,5 @@
 # renovate: datasource=npm depName=jazz-run
-ARG JAZZ_VERSION="0.19.10"
+ARG JAZZ_VERSION="0.19.11"
 
 FROM mcr.microsoft.com/playwright:v1.57.0-noble
 
