@@ -10,4 +10,5 @@ RUN \
     rm -rf /var/lib/apt/lists/*
 
 RUN \
-    npm install -g @antoncuranz/jazz-run@${JAZZ_VERSION}
+    npm install -g @antoncuranz/jazz-run@${JAZZ_VERSION} && \
+    npm cache clean --force
