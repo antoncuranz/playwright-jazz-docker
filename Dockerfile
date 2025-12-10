@@ -13,5 +13,4 @@ RUN --mount=type=secret,id=github_token \
     echo "@antoncuranz:registry=https://npm.pkg.github.com" > ~/.npmrc && \
     echo "//npm.pkg.github.com/:_authToken=$(cat /run/secrets/github_token)" >> ~/.npmrc && \
     npm install -g @antoncuranz/jazz-run@${JAZZ_VERSION} && \
-    rm ~/.npmrc && \
-    npm cache clean --force
+    rm ~/.npmrc
