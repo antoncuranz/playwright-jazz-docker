@@ -1,5 +1,5 @@
 # renovate: datasource=npm depName=@antoncuranz/jazz-run
-ARG JAZZ_VERSION="1.0.2"
+ARG JAZZ_VERSION="0.19.11"
 
 FROM mcr.microsoft.com/playwright:v1.57.0-noble
 
@@ -10,5 +10,5 @@ RUN \
     rm -rf /var/lib/apt/lists/*
 
 RUN \
-    npm install -g @antoncuranz/jazz-run@${JAZZ_VERSION} && \
+    npm install -g jazz-run@${JAZZ_VERSION} && \
     npm cache clean --force
