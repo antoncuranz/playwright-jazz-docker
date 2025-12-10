@@ -9,8 +9,6 @@ RUN \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN --mount=type=secret,id=github_token \
-    echo "@antoncuranz:registry=https://npm.pkg.github.com" > ~/.npmrc && \
-    echo "//npm.pkg.github.com/:_authToken=$(cat /run/secrets/github_token)" >> ~/.npmrc && \
-    npm install -g @antoncuranz/jazz-run@${JAZZ_VERSION} @antoncuranz/jazz-webhook@${JAZZ_VERSION} @antoncuranz/cojson-storage-sqlite@${JAZZ_VERSION} && \
+RUN \
+    npm install -g @antoncuranz/jazz-run@${JAZZ_VERSION} && \
     rm ~/.npmrc
