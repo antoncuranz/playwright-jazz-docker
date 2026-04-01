@@ -1,7 +1,7 @@
 # renovate: datasource=npm depName=@antoncuranz/jazz-run
 ARG JAZZ_VERSION="0.19.12"
 
-FROM mcr.microsoft.com/playwright:v1.58.2-noble
+FROM mcr.microsoft.com/playwright:v1.59.0-noble
 
 RUN \
     apt-get update && \
